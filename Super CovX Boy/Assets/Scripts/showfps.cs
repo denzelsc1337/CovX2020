@@ -43,7 +43,7 @@ public class showfps : MonoBehaviour
         float fpe_eses = 1.0f / deltatime;
 
         //formato
-        string txt = string.Format("{0:0.0} ms ({1:0.}fps)", milisec, fpe_eses);
+        string txt = string.Format("{0:0.0} ms \n({1:0.}fps)", milisec, fpe_eses);
 
         //agregar instancia del rect y del estilo en el label
         GUI.Label(rect,txt, estilo);
