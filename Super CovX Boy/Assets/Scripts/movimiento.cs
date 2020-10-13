@@ -17,7 +17,7 @@ public class movimiento : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
@@ -37,5 +37,15 @@ public class movimiento : MonoBehaviour
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpspeed);
         }
+    }
+
+    public void irDerecha()
+    {
+        rb2D.velocity = new Vector2(runspeed, rb2D.velocity.y);
+    }
+
+    public void irIzquierda()
+    {
+        Debug.Log("okis");
     }
 }
