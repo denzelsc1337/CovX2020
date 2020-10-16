@@ -9,7 +9,7 @@ public class showfps : MonoBehaviour
     public float color_g = 0f;
     public int size = 0;
     public float color_b = 0f;
-
+    public static float contador = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +41,10 @@ public class showfps : MonoBehaviour
         //conteo fps
         float milisec = deltatime * 1000.0f;
         float fpe_eses = 1.0f / deltatime;
+        float conteo = contador;
 
         //formato
-        string txt = string.Format("{0:0.0} ms \n({1:0.}fps)", milisec, fpe_eses);
+        string txt = string.Format("{0:0.0} ms \n({1:0.}fps)\n velocidad:0.0", milisec, fpe_eses, conteo);
 
         //agregar instancia del rect y del estilo en el label
         GUI.Label(rect,txt, estilo);

@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 76767889}
   - component: {fileID: 76767888}
   m_Layer: 8
-  m_Name: New Piskel (1)_0
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5150daae5c88b64cb19acec45bd4253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deltatime: 0.002869944
+  deltatime: 0.01658767
   color_r: 0
   color_g: 0
   size: 0
@@ -736,7 +736,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7220295, y: -1.3080044, z: -4.27}
+  m_LocalPosition: {x: 0.7209857, y: -1.3080044, z: -4.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1281,7 +1281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061114758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7220295, y: -1.3080044, z: -4.27}
+  m_LocalPosition: {x: 0.7209857, y: -1.3080044, z: -4.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2059661042}
@@ -1437,7 +1437,7 @@ GameObject:
   - component: {fileID: 1322295685}
   - component: {fileID: 1322295684}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: derecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1508,14 +1508,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 76767888}
         m_TargetAssemblyTypeName: movimiento, Assembly-CSharp
-        m_MethodName: irDerecha
-        m_Mode: 1
+        m_MethodName: buttonMoving
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: d
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1322295685
@@ -1896,7 +1896,7 @@ GameObject:
   - component: {fileID: 2022721625}
   - component: {fileID: 2022721624}
   m_Layer: 5
-  m_Name: Button
+  m_Name: izquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1967,14 +1967,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 76767888}
         m_TargetAssemblyTypeName: movimiento, Assembly-CSharp
-        m_MethodName: irIzquierda
-        m_Mode: 1
+        m_MethodName: buttonMoving
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: d
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2022721625
