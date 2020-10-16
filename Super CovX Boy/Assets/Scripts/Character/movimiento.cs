@@ -5,16 +5,20 @@ using UnityEngine.UIElements;
 
 public class movimiento : MonoBehaviour
 {
-    public float runspeed = 10;
+    public float runspeed = 10.0f;
     public float jumpspeed = 15;
     private Rigidbody2D rb2D;
-    public float conteo = 0.0f;
+    public static float conteo = 0.0f;
+    public static float total = 0;
     private Button Izquierdass, Derechass;
+    private Animator m_animacion;
+    public static float jumps;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>();   
+        rb2D = GetComponent<Rigidbody2D>();
+        m_animacion = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,7 +35,6 @@ public class movimiento : MonoBehaviour
         {
             rb2D.velocity = new Vector2(runspeed, rb2D.velocity.y);
             runspeed++;
-
         }
         else if (Input.GetKey("a") || Input.GetKey("left"))
         {
@@ -44,19 +47,25 @@ public class movimiento : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
         }
 
-        if (Input.GetKeyUp("d") || Input.GetKeyUp("a"))
+        if (Input.GetKeyUp("d") || runspeed > 200)
         {
             runspeed = 10;
             Debug.Log("el pepe");
-        }
 
+        }else if (Input.GetKeyUp("a"))
+        {
+            runspeed = 10;
+            Debug.Log("ete sech");
+        }
 
     }
     public void saltar()
     {
         if (Input.GetKey("space") && checkGround.isGrounded)
         {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpspeed);
+            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpspeed + runspeed);
+            conteo++;
+            total = jumpsCounter.jumpValue = conteo;
         }
     }
 

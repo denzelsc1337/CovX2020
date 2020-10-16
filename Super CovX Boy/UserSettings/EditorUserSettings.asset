@@ -6,13 +6,7 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     UnityRemoteDevice:
-      value: 01080d5501565f0e54080d2347755c1447414c7b7e7124687f7b1e6bb1e6673cb1b566bdb5683d39
-      flags: 0
-    UnityRemoteJoystickSource:
-      value: 315459091150
-      flags: 0
-    UnityRemoteResolution:
-      value: 2d5e460b0459
+      value: 225f4d46245b0d4902070862342649191512
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650

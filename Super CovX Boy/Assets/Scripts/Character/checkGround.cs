@@ -6,6 +6,7 @@ public class checkGround : MonoBehaviour
 {
     public static bool isGrounded;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +22,13 @@ public class checkGround : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D colission)
     {
         isGrounded = true;
-    }
+
+}
 
     private void OnTriggerExit2D(Collider2D colission)
     {
         isGrounded = false;
     }
+
+
 }
