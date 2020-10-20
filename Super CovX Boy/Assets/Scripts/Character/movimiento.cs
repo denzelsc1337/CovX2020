@@ -7,6 +7,8 @@ public class movimiento : MonoBehaviour
 {
     public float runspeed;
     public float jumpspeed;
+    public float doublejumpspeed;
+    private bool canDoubleJump;
     private Rigidbody2D rb2D;
 
     public SpriteRenderer SpriteRenderer;
@@ -31,15 +33,12 @@ public class movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-
+        saltar();
     }
 
     void FixedUpdate()
     {
         moving();
-        saltar();
-
     }
 
     public void moving()
@@ -82,12 +81,27 @@ public class movimiento : MonoBehaviour
     }
     public void saltar()
     {
-        if (Input.GetKey("space") && checkGround.isGrounded)
+        if (Input.GetKey("space"))
         {
-            //rb2D.AddForce(new Vector2(rb2D.velocity.x, jumpspeed));
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpspeed);
-            conteo++;
-            total = jumpsCounter.jumpValue = conteo;
+            if (checkGround.isGrounded)
+            {
+                canDoubleJump = true;
+                rb2D.velocity = new Vector2(rb2D.velocity.x, jumpspeed);
+                conteo++;
+                total = jumpsCounter.jumpValue = conteo;
+            }
+            else
+            {
+                if (Input.GetKeyDown("space"))
+                {
+                    if (canDoubleJump)
+                    {
+                        animator.SetBool("DoubleJump", true);
+                        rb2D.velocity = new Vector2(rb2D.velocity.x, doublejumpspeed);
+                        canDoubleJump = false;
+                    }
+                }
+            }
         }
 
         if (checkGround.isGrounded == false)
@@ -98,6 +112,17 @@ public class movimiento : MonoBehaviour
         if (checkGround.isGrounded == true)
         {
             animator.SetBool("Jump", false);
+            animator.SetBool("DoubleJump", false);
+            animator.SetBool("Falling", false);
+        }
+
+        if (rb2D.velocity.y < 0)
+        {
+            animator.SetBool("Falling", true);
+        }
+        else if (rb2D.velocity.y > 0)
+        {
+            animator.SetBool("Falling", false);
         }
 
         if (betterJump)
