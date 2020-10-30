@@ -67,17 +67,6 @@ public class movimiento : MonoBehaviour
             animator.SetBool("Run", false);
         }
 
-        //if (Input.GetKeyUp("d") || runspeed > 200)
-        //{
-        //    runspeed = 10;
-        //    Debug.Log("el pepe");
-
-        //}else if (Input.GetKeyUp("a"))
-        //{
-        //    runspeed = 10;
-        //    Debug.Log("ete sech");
-        //}
-
     }
     public void saltar()
     {
@@ -108,6 +97,7 @@ public class movimiento : MonoBehaviour
         {
             animator.SetBool("Jump", true);
             animator.SetBool("Run", false);
+            
         }
         if (checkGround.isGrounded == true)
         {

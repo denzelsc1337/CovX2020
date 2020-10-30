@@ -1,0 +1,22 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:4a97985f72271346023220e66e8b9e20:f4bd531e4c40c256b90d0012cbb18ab5:364e34b3a6ae5255462087494a23c35d$
+#
+:format=40300
+:texture=boy.png
+:size=128x64
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+Double Jump (32x32);59;35;48;8; 0.5;0.5; 0;0;0;0; 4;48;0;0;0;0;8;48;8; 2;1;2;3;0;1;3
+Fall;99;55;8;8; 0.5;0.5; 0;0;0;0; 4;8;0;0;0;0;8;8;8; 2;1;2;3;0;1;3
+Hit (32x32);1;35;56;8; 0.5;0.5; 0;0;0;0; 4;56;0;0;0;0;8;56;8; 2;1;2;3;0;1;3
+Idle (32x32);1;45;88;8; 0.5;0.5; 0;0;0;0; 4;88;0;0;0;0;8;88;8; 2;1;2;3;0;1;3
+Jump;1;15;8;8; 0.5;0.5; 0;0;0;0; 4;8;0;0;0;0;8;8;8; 2;1;2;3;0;1;3
+Run (32x32);1;55;96;8; 0.4609375;0.125; 0;0;0;0; 5;96;0;0;0;0;7;1;8;96;8; 3;0;3;4;1;2;3;0;1;3
+Wall Jump (32x32);1;25;40;8; 0.5;0.5; 0;0;0;0; 5;40;6;40;0;0;0;0;8;39;8; 3;2;3;4;1;2;4;0;1;4

@@ -5,6 +5,7 @@ using UnityEngine;
 public class showfps : MonoBehaviour
 {
     public float deltatime = 0.0f;
+    public float timestart = 60;
     public float color_r = 0f;
     public float color_g = 0f;
     public int size = 0;
@@ -42,10 +43,9 @@ public class showfps : MonoBehaviour
         float fpe_eses = 1.0f / deltatime;
 
         //formato
-        string txt = string.Format("{0:0.0} ms \n({1:0.}fps)\n jumps", milisec, fpe_eses, movimiento.total );
+        string txt = string.Format("{0:0.0} ms \n({1:0.}fps)\n {0:0}", milisec, fpe_eses);
 
         //agregar instancia del rect y del estilo en el label
         GUI.Label(rect,txt, estilo);
-
     }
 }
