@@ -23,6 +23,11 @@ public class mainMenuManager : MonoBehaviour
         SceneManager.LoadScene(nameScene);
     }
 
+    public void backScene(string nameScene)
+    {
+        SceneManager.LoadScene(nameScene); 
+    }
+
     public void quitGame()
     {
         if (Input.GetKey(KeyCode.Escape))
@@ -31,6 +36,7 @@ public class mainMenuManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("saliendo");
             Application.Quit();
         }  
     }

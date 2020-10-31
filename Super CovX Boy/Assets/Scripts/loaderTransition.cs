@@ -28,6 +28,12 @@ public class loaderTransition : MonoBehaviour
         StartCoroutine (LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));   
     }
 
+    public void BackLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+    }
+
+
     IEnumerator LoadLevel(int levelIndex)
     {
         //play animation
