@@ -50,6 +50,7 @@ public class CoxBoyController : MonoBehaviour
 
         if (groundCheck1 || groundCheck2 || groundCheck3)
         {
+            isJumping = false;
             animator.SetBool("IsJumping", false);
             return true;
         }

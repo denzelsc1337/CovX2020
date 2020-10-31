@@ -18,3 +18,4 @@ public class rotation : MonoBehaviour
         transform.Rotate(0, 0, rotationsXMinute * Time.deltaTime, Space.Self);
     }
 }
+
