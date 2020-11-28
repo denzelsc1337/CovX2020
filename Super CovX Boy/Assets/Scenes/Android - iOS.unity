@@ -3074,7 +3074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0156b6446896b254ea96c0e53de04699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawn: 0
+  respawn: 1
 --- !u!114 &1145737666
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class loaderTransition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -25,7 +25,11 @@ public class loaderTransition : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        StartCoroutine (LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));   
+
+
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+
+
     }
 
     public void BackLevel()
@@ -37,7 +41,8 @@ public class loaderTransition : MonoBehaviour
     IEnumerator LoadLevel(int levelIndex)
     {
         //play animation
-        animation.SetTrigger("Start");
+        if (Input.GetKeyDown("A"))
+            animation.SetTrigger("Start");
         //wait
         yield return new WaitForSeconds(transitionTime);
         //load scene
