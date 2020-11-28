@@ -34,7 +34,7 @@ public class diePlayer : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-
+            //GameManager
         }
     }
 
