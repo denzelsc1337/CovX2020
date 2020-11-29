@@ -69,8 +69,8 @@ public class Pause : MonoBehaviour
 
     public void SalirSI()
     {
-        Application.Quit();
-        Debug.Log("Saliste");
+        //Application.Quit();
+        SceneManager.LoadScene("World selection");
     }
 
 }

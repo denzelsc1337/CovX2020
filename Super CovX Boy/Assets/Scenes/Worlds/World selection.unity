@@ -283,7 +283,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 52750213}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 615278618}
+        m_TargetAssemblyTypeName: mainMenuManager, Assembly-CSharp
+        m_MethodName: gameScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Windows
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &52750213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,7 +845,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 447157406}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 615278618}
+        m_TargetAssemblyTypeName: mainMenuManager, Assembly-CSharp
+        m_MethodName: gameScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &447157406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,7 +1323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245364659738152011, guid: 1f6f5e073e5de7e4d8f49a59eaea74dd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7409012756264932184, guid: 1f6f5e073e5de7e4d8f49a59eaea74dd, type: 3}
       propertyPath: m_IsActive

@@ -12,31 +12,31 @@ public class diePlayer : MonoBehaviour
         
     }
 
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        SceneManager.LoadScene(respawn);
-    //        respawn++;
-    //    }
-
-    //    switch (respawn)
-    //    {
-    //        case 1: Debug.Log("bravo six going dark..."); break;
-    //        case 2: Debug.Log("again?"); break;
-    //        case 3: Debug.Log("omae wa mou shindeiru :D"); break;
-    //        default:
-    //            break;
-    //    }
-    //}
-
-     void OnCollisionEnter2D(Collision2D coll)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (coll.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            //GameManager
+            SceneManager.LoadScene(respawn);
+            respawn++;
+        }
+
+        switch (respawn)
+        {
+            case 1: Debug.Log("bravo six going dark..."); break;
+            case 2: Debug.Log("again?"); break;
+            case 3: Debug.Log("omae wa mou shindeiru :D"); break;
+            default:
+                break;
         }
     }
+
+    // void OnCollisionEnter2D(Collision2D coll)
+    //{
+    //    if (coll.gameObject.tag == "Player")
+    //    {
+    //        //GameManager
+    //    }
+    //}
 
 
 }
