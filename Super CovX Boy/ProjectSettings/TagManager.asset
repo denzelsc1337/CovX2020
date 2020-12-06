@@ -6,6 +6,7 @@ TagManager:
   tags:
   - spike_1
   - Enemy
+  - itemsFnsh
   layers:
   - Default
   - TransparentFX

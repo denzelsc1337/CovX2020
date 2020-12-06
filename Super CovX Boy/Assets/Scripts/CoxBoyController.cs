@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D), typeof(Animator))]
 
 public class CoxBoyController : MonoBehaviour
 {
+    //public bool zoomActive;
+    //public Camera cam;
+    //public float speedCam;
+
+    public Transform player;
+    public int deaths = 0;
     private float width;
     private float height;
     private float rayCastLengthCheck = 0.005f;
@@ -36,6 +43,7 @@ public class CoxBoyController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        this.player = GameObject.FindWithTag("Player").transform;
 
 
     }
@@ -230,6 +238,38 @@ public class CoxBoyController : MonoBehaviour
         }
     }
 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag=="Enemy")
+    //    {
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    //        deaths += 1;
 
+    //        switch (deaths)
+    //        {
+    //            
+    //            default:
+    //                break;
+    //        }
+    //    }
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if (collision.tag=="Enemy")
+        {
+            player.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
+            Debug.Log("prueba");
+            //collision.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
+            deaths += 1;
+        }
+       
+    }
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString());
+    }
 
 }
