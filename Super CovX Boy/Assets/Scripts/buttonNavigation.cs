@@ -20,7 +20,7 @@ public class buttonNavigation : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            if (index < total - 1)
+            if (index < total)
             {
                 index++;
                 Vector2 position = transform.position;
@@ -47,7 +47,7 @@ public class buttonNavigation : MonoBehaviour
             if (index == 0)
             {
                 SceneManager.LoadScene("World selection");
-                Debug.Log("enter pressed, arroshi cpp xD");
+                //Debug.Log("enter pressed, arroshi cpp xD");
             }
             else if (index == 1)
             {

@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class musicTransition : MonoBehaviour
 {
+    private static musicTransition instance;
+
+    private void Awake()
+    {
+        if (instance == null ){
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+        else {
+            Destroy(gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

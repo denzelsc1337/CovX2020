@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class pressStart : MonoBehaviour
 {
+    public string sceneName;
+    public Animator musicAnim;
+    public float waitime;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +19,17 @@ public class pressStart : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            Invoke("loadscene", 0.5f);
+            StartCoroutine(loadscene());
         }
     }
 
-    void loadscene()
+    IEnumerator loadscene()
     {
-        SceneManager.LoadScene("Menu");
+        musicAnim.SetTrigger("fadeOut");
+        yield return new WaitForSeconds(waitime);
+        SceneManager.LoadScene(sceneName);
+
     }
+
 
 }
