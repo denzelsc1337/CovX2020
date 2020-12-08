@@ -51,14 +51,13 @@ public class CoxBoyController : MonoBehaviour
     public bool PlayerIsOnGround()
     {
         bool groundCheck1 = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, rayCastLengthCheck);
-
         bool groundCheck2 = Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.2f), transform.position.y - height), Vector2.down, rayCastLengthCheck);
-
         bool groundCheck3 = Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.2f), transform.position.y - height), Vector2.down, rayCastLengthCheck);
 
         if (groundCheck1 || groundCheck2 || groundCheck3)
         {
             isJumping = false;
+            Debug.Log("tocando suelo");
             animator.SetBool("IsJumping", false);
             return true;
         }
@@ -106,6 +105,7 @@ public class CoxBoyController : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(input.x));
 
         // Si input.x es mayor que 0, entonces el jugador está mirando hacia la derecha, por lo que el sprite se voltea en el axis X
+
         if (input.x > 0f)
         {
             sr.flipX = false;
@@ -115,6 +115,16 @@ public class CoxBoyController : MonoBehaviour
             sr.flipX = true;
         }
 
+#if UNITY_ANDROID
+        if (Input.touchCount > 0f)
+        {
+            sr.flipX = false;
+        }
+        else if (Input.touchCount > 0f)
+        {
+            sr.flipX = true;
+        }
+#endif
         if (input.y >= 1f)
         {
             jumpDuration += Time.deltaTime;

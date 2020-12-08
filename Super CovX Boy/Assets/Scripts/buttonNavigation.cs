@@ -8,7 +8,7 @@ public class buttonNavigation : MonoBehaviour
 
     int index = 0;
     public int total = 6;
-    public float yOffset = 1F;
+    public float yOffset;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,11 +47,23 @@ public class buttonNavigation : MonoBehaviour
             if (index == 0)
             {
                 SceneManager.LoadScene("World selection");
-                //Debug.Log("enter pressed, arroshi cpp xD");
             }
             else if (index == 1)
             {
                 //achievments scene
+                SceneManager.LoadScene("Achievments");
+            }
+            else if (index == 2)
+            {
+                Debug.Log("Perfil");
+            }
+            else if (index == 3)
+            {
+                Debug.Log("Opciones");
+            }
+            else if (index == 4)
+            {
+                Debug.Log("Salir");
             }
         }
     }

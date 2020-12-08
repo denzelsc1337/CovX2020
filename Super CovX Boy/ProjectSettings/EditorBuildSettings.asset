@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Worlds/World selection.unity
     guid: e695e7f48c95df9479ffd0c9d604a8ff
   - enabled: 1
+    path: Assets/Scenes/Achievments.unity
+    guid: 1c4d45df71f5c734ea78237158469c45
+  - enabled: 1
     path: Assets/Scenes/Windows.unity
     guid: 4d7d88de91f0a5743894dc3ac29f828b
   - enabled: 1
