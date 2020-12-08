@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 5fecfcd92d76d5547aab19ecef124ac9
   - enabled: 1
-    path: Assets/Scenes/Worlds/World selection.unity
+    path: Assets/Scenes/Worlds/chapter selection.unity
     guid: e695e7f48c95df9479ffd0c9d604a8ff
   - enabled: 1
     path: Assets/Scenes/Achievments.unity

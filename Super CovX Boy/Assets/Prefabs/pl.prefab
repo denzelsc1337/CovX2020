@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 6275834167525794421}
   - component: {fileID: 6275834167525794418}
   - component: {fileID: 6071837817116052295}
-  m_Layer: 0
+  - component: {fileID: 8955800180343465193}
+  m_Layer: 9
   m_Name: pl
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -115,13 +116,13 @@ Rigidbody2D:
   m_GameObject: {fileID: 6275834167525794415}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 88ef4f06155f20840985967c46e49c3a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 1
@@ -157,7 +158,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.007623911, y: -0.0016610026}
@@ -173,3 +174,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45404202, y: 0.5501447}
   m_EdgeRadius: 0
+--- !u!68 &8955800180343465193
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6275834167525794415}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.24444444, y: 0}
+  - {x: -0.2211223, y: 0.13240862}
+  - {x: -0.12971216, y: 0.2427803}
+  - {x: -0.085145056, y: 0.26965278}
+  - {x: 0.15771277, y: 0.26716062}
+  - {x: 0.21527, y: 0.19855972}
+  - {x: 0.2429606, y: 0.1304544}
+  - {x: 0.22687006, y: -0.18932445}
+  - {x: 0.15278737, y: -0.22156382}
+  - {x: 0.15637073, y: -0.26646703}
+  - {x: -0.12939869, y: -0.2655776}
+  - {x: -0.12970302, y: -0.23613384}
+  - {x: -0.15745434, y: -0.24046694}
+  - {x: -0.15083097, y: -0.18623386}
+  - {x: -0.21022657, y: -0.19036582}
+  - {x: -0.24281962, y: 0.0052963495}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

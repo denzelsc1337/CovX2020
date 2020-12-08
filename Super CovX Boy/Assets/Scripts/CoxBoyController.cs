@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D), typeof(Animator))]
 
@@ -11,6 +8,7 @@ public class CoxBoyController : MonoBehaviour
     //public Camera cam;
     //public float speedCam;
 
+    public ParticleSystem dust;
     public Transform player;
     public int deaths = 0;
     private float width;
@@ -21,6 +19,7 @@ public class CoxBoyController : MonoBehaviour
     public float accel = 6f;
 
     private Vector2 input;
+    Vector2 startPos;
 
     private SpriteRenderer sr;
     private Rigidbody2D rb;
@@ -36,23 +35,24 @@ public class CoxBoyController : MonoBehaviour
 
     void Awake()
     {
-
+        rb = GetComponent<Rigidbody2D>();
         width = GetComponent<Collider2D>().bounds.extents.x + 0.1f;
-        height = GetComponent<Collider2D>().bounds.extents.y + 0.2f;
+        height = GetComponent<Collider2D>().bounds.extents.y + 1f;
 
         sr = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
+
         animator = GetComponent<Animator>();
         this.player = GameObject.FindWithTag("Player").transform;
+        startPos = this.transform.position;
 
 
     }
-
     public bool PlayerIsOnGround()
     {
-        bool groundCheck1 = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), Vector2.down, rayCastLengthCheck);
-        bool groundCheck2 = Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.2f), transform.position.y - height), Vector2.down, rayCastLengthCheck);
-        bool groundCheck3 = Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.2f), transform.position.y - height), Vector2.down, rayCastLengthCheck);
+        bool groundCheck1 = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - height), -Vector2.up, rayCastLengthCheck);
+        bool groundCheck2 = Physics2D.Raycast(new Vector2(transform.position.x + (width - 0.2f), transform.position.y - height), -Vector2.up, rayCastLengthCheck);
+        bool groundCheck3 = Physics2D.Raycast(new Vector2(transform.position.x - (width - 0.2f), transform.position.y - height), -Vector2.up, rayCastLengthCheck);
+
 
         if (groundCheck1 || groundCheck2 || groundCheck3)
         {
@@ -109,10 +109,12 @@ public class CoxBoyController : MonoBehaviour
         if (input.x > 0f)
         {
             sr.flipX = false;
+            CreateDust();
         }
         else if (input.x < 0f)
         {
             sr.flipX = true;
+            CreateDust();
         }
 
 #if UNITY_ANDROID
@@ -130,6 +132,7 @@ public class CoxBoyController : MonoBehaviour
             jumpDuration += Time.deltaTime;
             //todo animator isJumping true
             animator.SetBool("IsJumping", true);
+            CreateDust();
         }
         else
         {
@@ -156,7 +159,7 @@ public class CoxBoyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+
         var acceleration = 0f;
 
         if (PlayerIsOnGround())
@@ -184,6 +187,7 @@ public class CoxBoyController : MonoBehaviour
         if (PlayerIsTouchingGroundOrWall() && input.y == 1)
         {
             yVelocity = jump;
+            CreateDust();
         }
         else
         {
@@ -266,20 +270,27 @@ public class CoxBoyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (collision.tag=="Enemy")
+
+        if (collision.tag == "Enemy")
         {
-            player.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
+            
+            //player.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
+            this.transform.position = startPos;
             Debug.Log("prueba");
             //collision.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
             deaths += 1;
         }
-       
+
     }
 
     void OnGUI()
     {
         GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString());
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
     }
 
 }

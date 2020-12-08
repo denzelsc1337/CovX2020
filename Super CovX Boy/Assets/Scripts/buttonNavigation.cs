@@ -46,7 +46,7 @@ public class buttonNavigation : MonoBehaviour
         {
             if (index == 0)
             {
-                SceneManager.LoadScene("World selection");
+                SceneManager.LoadScene("chapter selection");
             }
             else if (index == 1)
             {
