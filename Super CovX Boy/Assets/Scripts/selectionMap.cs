@@ -1,29 +1,54 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class buttonNavigation : MonoBehaviour
+public class selectionMap : MonoBehaviour
 {
-   
-
-     int index = 0;
-    public int total = 6;
+    int indexY = 0;
+    int index = 0;
+    public int totalY;
+    public int totalx;
     public float yOffset;
+    public float xOffset;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if (index < total)
+            if (index < totalx)
             {
                 index++;
+                Vector2 position = transform.position;
+                position.x += xOffset;
+                transform.position = position;
+            }
+
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (index > 0)
+            {
+                index--;
+                Vector2 position = transform.position;
+                position.x -= xOffset;
+                transform.position = position;
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (index==3 & indexY < totalY)
+            {
+                indexY++;
                 Vector2 position = transform.position;
                 position.y -= yOffset;
                 transform.position = position;
@@ -33,9 +58,9 @@ public class buttonNavigation : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (index > 0)
+            if (indexY > 0)
             {
-                index--;
+                indexY--;
                 Vector2 position = transform.position;
                 position.y += yOffset;
                 transform.position = position;
@@ -44,21 +69,23 @@ public class buttonNavigation : MonoBehaviour
         }
 
 
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             if (index == 0)
             {
                 //gameScene(escena);
-                SceneManager.LoadScene("chapter selection");
+                Debug.Log("mapa_1");
             }
             else if (index == 1)
             {
                 //achievments scene
-                SceneManager.LoadScene("Achievments");
+                SceneManager.LoadScene("Windows");
+                Debug.Log("mapa_2");
             }
             else if (index == 2)
             {
-                Debug.Log("Perfil");
+                Debug.Log("mapa_3");
             }
             else if (index == 3)
             {
@@ -68,8 +95,7 @@ public class buttonNavigation : MonoBehaviour
             {
                 Debug.Log("Salir");
             }
-            
+
         }
     }
-
 }

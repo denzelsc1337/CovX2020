@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Worlds/chapter selection.unity
     guid: e695e7f48c95df9479ffd0c9d604a8ff
   - enabled: 1
+    path: Assets/Scenes/Maps/mapa_1.unity
+    guid: 3021f27e320240147843090a45fabee7
+  - enabled: 1
     path: Assets/Scenes/Achievments.unity
     guid: 1c4d45df71f5c734ea78237158469c45
   - enabled: 1
