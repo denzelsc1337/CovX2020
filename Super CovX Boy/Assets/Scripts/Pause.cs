@@ -7,6 +7,7 @@ public class Pause : MonoBehaviour
 {
     public static bool gameP;
     public static bool boolseguroP;
+    [SerializeField] private string sceneName;
 
     public GameObject MenuP, SeguroP, OptionsP;
 
@@ -70,7 +71,9 @@ public class Pause : MonoBehaviour
     public void SalirSI()
     {
         //Application.Quit();
-        SceneManager.LoadScene("World selection");
+        Time.timeScale = 1;
+        gameP = false;
+        SceneManager.LoadScene(sceneName);
     }
 
 }

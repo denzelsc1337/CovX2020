@@ -1,22 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class zoomCam : MonoBehaviour
 {
     public bool zoomActive;
-
-    public Vector3[] target;
+    [SerializeField] private string sceneName;
+    public CinemachineVirtualCamera cn;
+    private Cinemachine.CinemachineVirtualCamera cm;
 
     public Camera cam;
+    
 
     public float speedZoom;
 
 
+    private void Awake()
+    {
+        cm = GetComponent<CinemachineVirtualCamera>();
+       
+    }
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
+       
     }
 
     // Update is called once per frame
@@ -30,6 +40,10 @@ public class zoomCam : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            Debug.Log("Level Complete");
+            SceneManager.LoadScene(sceneName);
+            CoxBoyController.cancelControls();
+            
             zoomActive = true;
         }
     }
@@ -38,6 +52,7 @@ public class zoomCam : MonoBehaviour
         if (collision.tag == "Player")
         {
             zoomActive = false;
+            CoxBoyController.GiveBackControls();
         }
     }
 
@@ -51,6 +66,7 @@ public class zoomCam : MonoBehaviour
         }
         else
         {
+
             cinematicBars.Instance.hideBars();
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 5, speedZoom);
         }

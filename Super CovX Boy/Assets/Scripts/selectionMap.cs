@@ -75,17 +75,18 @@ public class selectionMap : MonoBehaviour
             if (index == 0)
             {
                 //gameScene(escena);
-                Debug.Log("mapa_1");
+                Debug.Log("no");
             }
             else if (index == 1)
             {
                 //achievments scene
                 SceneManager.LoadScene("Windows");
-                Debug.Log("mapa_2");
+                Debug.Log("mapa_1");
             }
             else if (index == 2)
             {
-                Debug.Log("mapa_3");
+                SceneManager.LoadScene("Level 2");
+                Debug.Log("mapa_2");
             }
             else if (index == 3)
             {
@@ -99,3 +100,4 @@ public class selectionMap : MonoBehaviour
         }
     }
 }
+//DONE :D

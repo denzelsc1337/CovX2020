@@ -10,7 +10,7 @@ public class selectorDevice : MonoBehaviour
     void Start()
     {
         this.controls = GameObject.FindWithTag("controls");
-        controls.SetActive(false);
+        //controls.SetActive(false);
 
 #if UNITY_ANDROID
     controls.SetActive(true);

@@ -8,6 +8,8 @@ public class CoxBoyController : MonoBehaviour
     //public Camera cam;
     //public float speedCam;
 
+    public static bool frozen;
+    public static CharacterController control;
     public ParticleSystem dust;
     public Transform player;
     public int deaths = 0;
@@ -38,6 +40,7 @@ public class CoxBoyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         width = GetComponent<Collider2D>().bounds.extents.x + 0.1f;
         height = GetComponent<Collider2D>().bounds.extents.y + 1f;
+        control = GetComponent<CharacterController>();
 
         sr = GetComponent<SpriteRenderer>();
 
@@ -57,7 +60,7 @@ public class CoxBoyController : MonoBehaviour
         if (groundCheck1 || groundCheck2 || groundCheck3)
         {
             isJumping = false;
-            Debug.Log("tocando suelo");
+            //Debug.Log("tocando suelo");
             animator.SetBool("IsJumping", false);
             return true;
         }
@@ -117,14 +120,18 @@ public class CoxBoyController : MonoBehaviour
             CreateDust();
         }
 
+
+
 #if UNITY_ANDROID
         if (Input.touchCount > 0f)
         {
             sr.flipX = false;
+            CreateDust();
         }
         else if (Input.touchCount > 0f)
         {
             sr.flipX = true;
+            CreateDust();
         }
 #endif
         if (input.y >= 1f)
@@ -161,6 +168,7 @@ public class CoxBoyController : MonoBehaviour
     {
 
         var acceleration = 0f;
+
 
         if (PlayerIsOnGround())
         {
@@ -273,7 +281,7 @@ public class CoxBoyController : MonoBehaviour
 
         if (collision.tag == "Enemy")
         {
-            
+
             //player.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
             this.transform.position = startPos;
             Debug.Log("prueba");
@@ -291,6 +299,15 @@ public class CoxBoyController : MonoBehaviour
     void CreateDust()
     {
         dust.Play();
+    }
+
+    public static void cancelControls()
+    {
+        frozen = false;
+    }
+    public static void GiveBackControls()
+    {
+        frozen = true;
     }
 
 }
