@@ -1,19 +1,17 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class selectorDevice : MonoBehaviour
 {
-    private GameObject controls;
-    bool isActive;
+    public GameObject controls;
+    bool isActive = false;
     // Start is called before the first frame update
     void Start()
     {
-        this.controls = GameObject.FindWithTag("controls");
+        //this.controls = GameObject.FindWithTag("controls");
         //controls.SetActive(false);
 
 #if UNITY_ANDROID
-    controls.SetActive(true);
+        controls.SetActive(true);
 #endif
 
 #if UNITY_STANDALONE_WIN

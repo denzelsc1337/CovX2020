@@ -6,10 +6,13 @@ using Cinemachine;
 
 public class zoomCam : MonoBehaviour
 {
+    
+  
     public bool zoomActive;
     [SerializeField] private string sceneName;
     public CinemachineVirtualCamera cn;
     private Cinemachine.CinemachineVirtualCamera cm;
+    
 
     public Camera cam;
     
@@ -40,9 +43,10 @@ public class zoomCam : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            //CoxBoyController.input;
             Debug.Log("Level Complete");
-            SceneManager.LoadScene(sceneName);
-            CoxBoyController.cancelControls();
+            //StartCoroutine(LoadAsynchronously(sceneName));
+            CoxBoyController.animator.enabled = false;
             
             zoomActive = true;
         }
@@ -51,8 +55,11 @@ public class zoomCam : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            varGameObject.active = false;
+            CoxBoyController.input.y = 0f;
             zoomActive = false;
             CoxBoyController.GiveBackControls();
+            CoxBoyController.animator.enabled = true;
         }
     }
 
@@ -62,14 +69,23 @@ public class zoomCam : MonoBehaviour
         {
             cinematicBars.Instance.showBars();
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 2, speedZoom);
-            
         }
         else
         {
-
             cinematicBars.Instance.hideBars();
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 5, speedZoom);
         }
     }
+    //IEnumerator LoadAsynchronously (string sceneName)
+    //{
+    //    yield return new WaitForSeconds(4);
+    //    AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+    //    while (!operation.isDone)
+    //    {
+    //        Debug.Log(operation.progress);
+    //        yield return null;
+    //    }
+    //}
+
 
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D), typeof(Animator))]
 
 public class CoxBoyController : MonoBehaviour
@@ -12,7 +13,9 @@ public class CoxBoyController : MonoBehaviour
     public static CharacterController control;
     public ParticleSystem dust;
     public Transform player;
-    public int deaths = 0;
+    public float posY;
+    public float posX;
+    public int deaths;
     private float width;
     private float height;
     private float rayCastLengthCheck = 0.005f;
@@ -20,12 +23,13 @@ public class CoxBoyController : MonoBehaviour
     public float speed = 14f;
     public float accel = 6f;
 
-    private Vector2 input;
+    public static Vector2 input;
+    private Vector2 inputTouch;
     Vector2 startPos;
 
     private SpriteRenderer sr;
     private Rigidbody2D rb;
-    private Animator animator;
+    public static Animator animator;
 
     public bool isJumping;
     public float jumpSpeed = 8f;
@@ -104,7 +108,6 @@ public class CoxBoyController : MonoBehaviour
         //obtener los valores X e Y de los controles de Unity ( Horizontal y Jump)
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Jump");
-
         animator.SetFloat("Speed", Mathf.Abs(input.x));
 
         // Si input.x es mayor que 0, entonces el jugador está mirando hacia la derecha, por lo que el sprite se voltea en el axis X
@@ -119,21 +122,6 @@ public class CoxBoyController : MonoBehaviour
             sr.flipX = true;
             CreateDust();
         }
-
-
-
-#if UNITY_ANDROID
-        if (Input.touchCount > 0f)
-        {
-            sr.flipX = false;
-            CreateDust();
-        }
-        else if (Input.touchCount > 0f)
-        {
-            sr.flipX = true;
-            CreateDust();
-        }
-#endif
         if (input.y >= 1f)
         {
             jumpDuration += Time.deltaTime;
@@ -281,8 +269,7 @@ public class CoxBoyController : MonoBehaviour
 
         if (collision.tag == "Enemy")
         {
-
-            //player.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
+            //player.gameObject.transform.position = new Vector2(posX, posY);
             this.transform.position = startPos;
             Debug.Log("prueba");
             //collision.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
@@ -291,7 +278,7 @@ public class CoxBoyController : MonoBehaviour
 
     }
 
-    void OnGUI()
+void OnGUI()
     {
         GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString());
     }
@@ -310,4 +297,17 @@ public class CoxBoyController : MonoBehaviour
         frozen = true;
     }
 
+    #if UNITY_ANDROID
+    public void touch()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            Debug.Log("tocando");
+        }
+    }
+    #endif
 }
+
+
+
+
