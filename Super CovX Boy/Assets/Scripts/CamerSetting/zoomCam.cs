@@ -55,7 +55,7 @@ public class zoomCam : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            varGameObject.active = false;
+            //varGameObject.active = false;
             CoxBoyController.input.y = 0f;
             zoomActive = false;
             CoxBoyController.GiveBackControls();

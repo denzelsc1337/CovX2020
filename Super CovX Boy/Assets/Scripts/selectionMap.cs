@@ -80,7 +80,7 @@ public class selectionMap : MonoBehaviour
             else if (index == 1)
             {
                 //achievments scene
-                SceneManager.LoadScene("Windows");
+                SceneManager.LoadScene("Level 1");
                 Debug.Log("mapa_1");
             }
             else if (index == 2)

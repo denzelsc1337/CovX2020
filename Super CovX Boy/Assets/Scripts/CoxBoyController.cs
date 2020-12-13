@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 
 [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D), typeof(Animator))]
@@ -10,6 +11,7 @@ public class CoxBoyController : MonoBehaviour
     //public float speedCam;
 
     public static bool frozen;
+    public string axisName = "Horizontal";
     public static CharacterController control;
     public ParticleSystem dust;
     public Transform player;
@@ -37,6 +39,10 @@ public class CoxBoyController : MonoBehaviour
     private float jumpDuration;
     public float airAccel = 3f;
     public float jump = 14f;
+
+    private float screenCenterX;
+
+    public Button botonRight;
 
 
     void Awake()
@@ -97,7 +103,8 @@ public class CoxBoyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Application.targetFrameRate = 300;
+        screenCenterX = Screen.width * 0.5f;
     }
 
 
@@ -108,48 +115,21 @@ public class CoxBoyController : MonoBehaviour
         //obtener los valores X e Y de los controles de Unity ( Horizontal y Jump)
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Jump");
+
+        inputTouch.x = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(input.x));
 
+#if UNITY_ANDROID || UNITY_IOS
+        //float point_x = Input.GetAxis("");
+        if (Input.touchCount > 0)
+        {
+
+        }
+
+#endif
+        movementWindows();
         // Si input.x es mayor que 0, entonces el jugador está mirando hacia la derecha, por lo que el sprite se voltea en el axis X
 
-        if (input.x > 0f)
-        {
-            sr.flipX = false;
-            CreateDust();
-        }
-        else if (input.x < 0f)
-        {
-            sr.flipX = true;
-            CreateDust();
-        }
-        if (input.y >= 1f)
-        {
-            jumpDuration += Time.deltaTime;
-            //todo animator isJumping true
-            animator.SetBool("IsJumping", true);
-            CreateDust();
-        }
-        else
-        {
-            isJumping = false;
-            //todo animator isJumping false
-            animator.SetBool("IsJumping", false);
-            jumpDuration = 0f;
-
-        }
-
-        if (PlayerIsOnGround() && !isJumping)
-        {
-            if (input.y > 0f)
-            {
-                isJumping = true;
-            }
-            //todo animation isOnWall false
-            animator.SetBool("IsOnWall", false);
-            animator.SetBool("IsJumping", false);
-        }
-
-        if (jumpDuration > jumpDurationThreshold) input.y = 0f;
     }
 
     void FixedUpdate()
@@ -278,7 +258,7 @@ public class CoxBoyController : MonoBehaviour
 
     }
 
-void OnGUI()
+    void OnGUI()
     {
         GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString());
     }
@@ -297,15 +277,50 @@ void OnGUI()
         frozen = true;
     }
 
-    #if UNITY_ANDROID
-    public void touch()
+    public void movementWindows()
     {
-        if (Input.GetMouseButton(0))
+        if (input.x > 0f)
         {
-            Debug.Log("tocando");
+            sr.flipX = false;
+            CreateDust();
         }
+        else if (input.x < 0f)
+        {
+            sr.flipX = true;
+            CreateDust();
+        }
+        if (input.y >= 1f)
+        {
+            jumpDuration += Time.deltaTime;
+            //todo animator isJumping true
+            animator.SetBool("IsJumping", true);
+            CreateDust();
+        }
+        else
+        {
+            isJumping = false;
+            //todo animator isJumping false
+            animator.SetBool("IsJumping", false);
+            jumpDuration = 0f;
+
+        }
+
+        if (PlayerIsOnGround() && !isJumping)
+        {
+            if (input.y > 0f)
+            {
+                isJumping = true;
+            }
+            //todo animation isOnWall false
+            animator.SetBool("IsOnWall", false);
+            animator.SetBool("IsJumping", false);
+        }
+
+        if (jumpDuration > jumpDurationThreshold) input.y = 0f;
     }
-    #endif
+
+
+
 }
 
 
