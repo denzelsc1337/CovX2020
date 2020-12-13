@@ -30,7 +30,7 @@ public class CoxBoyController : MonoBehaviour
     Vector2 startPos;
 
     private SpriteRenderer sr;
-    private Rigidbody2D rb;
+    private static Rigidbody2D rb;
     public static Animator animator;
 
     public bool isJumping;
@@ -289,7 +289,7 @@ public class CoxBoyController : MonoBehaviour
 
     public static void cancelControls()
     {
-        frozen = false;
+        rb.velocity = new Vector2(0f, 0f);
     }
     public static void GiveBackControls()
     {

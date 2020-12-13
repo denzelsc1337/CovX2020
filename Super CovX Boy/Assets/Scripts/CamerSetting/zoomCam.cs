@@ -46,7 +46,7 @@ public class zoomCam : MonoBehaviour
             //CoxBoyController.input;
             Debug.Log("Level Complete");
             controls.SetActive(false);
-            
+            CoxBoyController.cancelControls();
             //StartCoroutine(LoadAsynchronously(sceneName));
             CoxBoyController.animator.enabled = false;
             
@@ -58,7 +58,6 @@ public class zoomCam : MonoBehaviour
         if (collision.tag == "Player")
         {
             //varGameObject.active = false;
-            
             CoxBoyController.input.y = 0f;
             zoomActive = false;
             CoxBoyController.GiveBackControls();
