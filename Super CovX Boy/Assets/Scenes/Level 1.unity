@@ -19768,6 +19768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632c6f17668bc574db1bcd7a0f52dc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controls: {fileID: 189526699}
   zoomActive: 0
   sceneName: Level 2
   cn: {fileID: 0}
@@ -58338,6 +58339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632c6f17668bc574db1bcd7a0f52dc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controls: {fileID: 0}
   zoomActive: 0
   sceneName: 
   cn: {fileID: 0}
