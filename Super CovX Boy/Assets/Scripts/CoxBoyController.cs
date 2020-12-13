@@ -41,9 +41,16 @@ public class CoxBoyController : MonoBehaviour
     public float jump = 14f;
 
     private float screenCenterX;
+    public float screenWith;
 
     public Button botonRight;
 
+    void Start()
+    {
+        Application.targetFrameRate = 300;
+        screenCenterX = Screen.width * 0.5f;
+        screenWith = Screen.width / 2;
+    }
 
     void Awake()
     {
@@ -95,17 +102,13 @@ public class CoxBoyController : MonoBehaviour
         if (PlayerIsOnGround() || IsWallToLeftOrRight())
         {
 
-            return true;
+           return true;
         }
         return false;
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        Application.targetFrameRate = 300;
-        screenCenterX = Screen.width * 0.5f;
-    }
+
 
 
 
@@ -113,22 +116,52 @@ public class CoxBoyController : MonoBehaviour
     void Update()
     {
         //obtener los valores X e Y de los controles de Unity ( Horizontal y Jump)
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Jump");
-
-        inputTouch.x = Input.GetAxisRaw("Horizontal");
+        input.x = SimpleInput.GetAxisRaw("Horizontal");
+        input.y = SimpleInput.GetAxisRaw("Vertical");
         animator.SetFloat("Speed", Mathf.Abs(input.x));
 
 #if UNITY_ANDROID || UNITY_IOS
-        //float point_x = Input.GetAxis("");
-        if (Input.touchCount > 0)
+
+#endif
+        // Si input.x es mayor que 0, entonces el jugador está mirando hacia la derecha, por lo que el sprite se voltea en el axis X
+        if (input.x > 0f)
         {
+            sr.flipX = false;
+            CreateDust();
+        }
+        else if (input.x < 0f)
+        {
+            sr.flipX = true;
+            CreateDust();
+        }
+        if (input.y >= 1f)
+        {
+            jumpDuration += Time.deltaTime;
+            //todo animator isJumping true
+            animator.SetBool("IsJumping", true);
+            CreateDust();
+        }
+        else
+        {
+            isJumping = false;
+            //todo animator isJumping false
+            animator.SetBool("IsJumping", false);
+            jumpDuration = 0f;
 
         }
 
-#endif
-        movementWindows();
-        // Si input.x es mayor que 0, entonces el jugador está mirando hacia la derecha, por lo que el sprite se voltea en el axis X
+        if (PlayerIsOnGround() && !isJumping)
+        {
+            if (input.y > 0f)
+            {
+                isJumping = true;
+            }
+            //todo animation isOnWall false
+            animator.SetBool("IsOnWall", false);
+            animator.SetBool("IsJumping", false);
+        }
+
+        if (jumpDuration > jumpDurationThreshold) input.y = 0f;
 
     }
 
@@ -228,21 +261,7 @@ public class CoxBoyController : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag=="Enemy")
-    //    {
-    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    //        deaths += 1;
 
-    //        switch (deaths)
-    //        {
-    //            
-    //            default:
-    //                break;
-    //        }
-    //    }
-    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -277,47 +296,8 @@ public class CoxBoyController : MonoBehaviour
         frozen = true;
     }
 
-    public void movementWindows()
-    {
-        if (input.x > 0f)
-        {
-            sr.flipX = false;
-            CreateDust();
-        }
-        else if (input.x < 0f)
-        {
-            sr.flipX = true;
-            CreateDust();
-        }
-        if (input.y >= 1f)
-        {
-            jumpDuration += Time.deltaTime;
-            //todo animator isJumping true
-            animator.SetBool("IsJumping", true);
-            CreateDust();
-        }
-        else
-        {
-            isJumping = false;
-            //todo animator isJumping false
-            animator.SetBool("IsJumping", false);
-            jumpDuration = 0f;
 
-        }
 
-        if (PlayerIsOnGround() && !isJumping)
-        {
-            if (input.y > 0f)
-            {
-                isJumping = true;
-            }
-            //todo animation isOnWall false
-            animator.SetBool("IsOnWall", false);
-            animator.SetBool("IsJumping", false);
-        }
-
-        if (jumpDuration > jumpDurationThreshold) input.y = 0f;
-    }
 
 
 
