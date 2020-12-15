@@ -49,7 +49,8 @@ public class zoomCam : MonoBehaviour
             //StartCoroutine(LoadAsynchronously(sceneName));
             CoxBoyController.animator.enabled = false;
             deaths.text = CoxBoyController.deaths.ToString();
-
+            jumps.text = CoxBoyController.jumps.ToString();
+            CoxBoyController.phrases();
             zoomActive = true;
         }
     }

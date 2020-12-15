@@ -20,6 +20,7 @@ public class CoxBoyController : MonoBehaviour
 
     public static int jumps;
     public static int deaths;
+
     private float width;
     private float height;
     private float rayCastLengthCheck = 0.005f;
@@ -121,6 +122,7 @@ public class CoxBoyController : MonoBehaviour
         input.x = SimpleInput.GetAxisRaw("Horizontal");
         input.y = SimpleInput.GetAxisRaw("Jump");
         animator.SetFloat("Speed", Mathf.Abs(input.x));
+        
 
 #if UNITY_ANDROID || UNITY_IOS
         input.y = SimpleInput.GetAxisRaw("Vertical");
@@ -198,6 +200,7 @@ public class CoxBoyController : MonoBehaviour
         if (PlayerIsTouchingGroundOrWall() && input.y == 1)
         {
             yVelocity = jump;
+            jumps++;
             CreateDust();
         }
         else
@@ -271,6 +274,7 @@ public class CoxBoyController : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             //player.gameObject.transform.position = new Vector2(posX, posY);
+            //phrases();
             this.transform.position = startPos;
             Debug.Log("prueba");
             //collision.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
@@ -281,7 +285,7 @@ public class CoxBoyController : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString());
+        GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString() +"\nSaltos: "+jumps.ToString());
     }
 
     void CreateDust()
@@ -296,6 +300,25 @@ public class CoxBoyController : MonoBehaviour
     public static void GiveBackControls()
     {
         frozen = true;
+    }
+
+    public static void phrases()
+    {
+        switch (deaths)
+        {
+            case 1:Debug.Log("Nice Work");break;
+            case 2: Debug.Log("1337"); break;
+            case 3: Debug.Log("villa = design xD"); break;
+            case 4: Debug.Log("145"); break;
+            case 5: Debug.Log("worky worky"); break;
+            case 6: Debug.Log("monday morning lunatic :D"); break;
+            default:
+                break;
+        }
+        if (deaths==0)
+        {
+            Debug.Log("Acaso no lo viste venir?:D");
+        }
     }
 
 
