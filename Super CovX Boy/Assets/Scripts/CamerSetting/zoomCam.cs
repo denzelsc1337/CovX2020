@@ -1,21 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Cinemachine;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using Cinemachine;
+using UnityEngine.UI;
 
 public class zoomCam : MonoBehaviour
 {
-
+    public Text jumps;
+    public Text deaths;
     public GameObject controls;
     public bool zoomActive;
     [SerializeField] private string sceneName;
     public CinemachineVirtualCamera cn;
     private Cinemachine.CinemachineVirtualCamera cm;
-    
+
 
     public Camera cam;
-    
+
 
     public float speedZoom;
 
@@ -23,19 +22,19 @@ public class zoomCam : MonoBehaviour
     private void Awake()
     {
         cm = GetComponent<CinemachineVirtualCamera>();
-       
+
     }
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
-       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
@@ -49,7 +48,8 @@ public class zoomCam : MonoBehaviour
             CoxBoyController.cancelControls();
             //StartCoroutine(LoadAsynchronously(sceneName));
             CoxBoyController.animator.enabled = false;
-            
+            deaths.text = CoxBoyController.deaths.ToString();
+
             zoomActive = true;
         }
     }

@@ -17,7 +17,9 @@ public class CoxBoyController : MonoBehaviour
     public Transform player;
     public float posY;
     public float posX;
-    public int deaths;
+
+    public static int jumps;
+    public static int deaths;
     private float width;
     private float height;
     private float rayCastLengthCheck = 0.005f;
@@ -117,11 +119,11 @@ public class CoxBoyController : MonoBehaviour
     {
         //obtener los valores X e Y de los controles de Unity ( Horizontal y Jump)
         input.x = SimpleInput.GetAxisRaw("Horizontal");
-        input.y = SimpleInput.GetAxisRaw("Vertical");
+        input.y = SimpleInput.GetAxisRaw("Jump");
         animator.SetFloat("Speed", Mathf.Abs(input.x));
 
 #if UNITY_ANDROID || UNITY_IOS
-
+        input.y = SimpleInput.GetAxisRaw("Vertical");
 #endif
         // Si input.x es mayor que 0, entonces el jugador está mirando hacia la derecha, por lo que el sprite se voltea en el axis X
         if (input.x > 0f)
