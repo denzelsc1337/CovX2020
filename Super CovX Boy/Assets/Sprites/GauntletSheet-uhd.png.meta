@@ -1,0 +1,934 @@
+fileFormatVersion: 2
+guid: 9a31f1d2fe531584ea251bf93f6aea0f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8074969679707090678
+    second: GauntletSheet-uhd_0
+  - first:
+      213: -3763720016245675643
+    second: GauntletSheet-uhd_1
+  - first:
+      213: 8042024654805234223
+    second: GauntletSheet-uhd_2
+  - first:
+      213: 4038954206313612346
+    second: GauntletSheet-uhd_3
+  - first:
+      213: -7147797199089031389
+    second: GauntletSheet-uhd_4
+  - first:
+      213: -8718558464337142375
+    second: GauntletSheet-uhd_5
+  - first:
+      213: -4278815479093172055
+    second: GauntletSheet-uhd_6
+  - first:
+      213: -3602740912787284718
+    second: GauntletSheet-uhd_7
+  - first:
+      213: -7863329095163151112
+    second: GauntletSheet-uhd_8
+  - first:
+      213: 5418357477380141849
+    second: GauntletSheet-uhd_9
+  - first:
+      213: -7520506967744947726
+    second: GauntletSheet-uhd_10
+  - first:
+      213: -4636454066922419185
+    second: GauntletSheet-uhd_11
+  - first:
+      213: -6461433011699140893
+    second: GauntletSheet-uhd_12
+  - first:
+      213: -7293919203783959299
+    second: GauntletSheet-uhd_13
+  - first:
+      213: -1955744193614623282
+    second: GauntletSheet-uhd_14
+  - first:
+      213: -9134828420697106229
+    second: GauntletSheet-uhd_15
+  - first:
+      213: 8983925931821488587
+    second: GauntletSheet-uhd_16
+  - first:
+      213: -4239488280635042313
+    second: GauntletSheet-uhd_17
+  - first:
+      213: 6262315682962389220
+    second: GauntletSheet-uhd_18
+  - first:
+      213: -2495479096531141818
+    second: GauntletSheet-uhd_19
+  - first:
+      213: 2284558929009460358
+    second: GauntletSheet-uhd_20
+  - first:
+      213: -5509509359787469393
+    second: GauntletSheet-uhd_21
+  - first:
+      213: 1525916748091230497
+    second: GauntletSheet-uhd_22
+  - first:
+      213: 6643182932126808369
+    second: GauntletSheet-uhd_23
+  - first:
+      213: -4542484283771509585
+    second: GauntletSheet-uhd_24
+  - first:
+      213: 5023133070094269730
+    second: GauntletSheet-uhd_25
+  - first:
+      213: 6754413552529836863
+    second: GauntletSheet-uhd_26
+  - first:
+      213: -8225725676869191088
+    second: GauntletSheet-uhd_27
+  - first:
+      213: -2900065763308908370
+    second: GauntletSheet-uhd_28
+  - first:
+      213: -4980384550840347799
+    second: GauntletSheet-uhd_29
+  - first:
+      213: -5302594640282701193
+    second: GauntletSheet-uhd_30
+  - first:
+      213: -1989300941693904555
+    second: GauntletSheet-uhd_31
+  - first:
+      213: 366670051975376038
+    second: GauntletSheet-uhd_32
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1328
+        width: 239
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6feadf2042e001070800000000000000
+      internalID: 8074969679707090678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_1
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1328
+        width: 294
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58926a5169494cbc0800000000000000
+      internalID: -3763720016245675643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_2
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1315
+        width: 636
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f227998a0d20b9f60800000000000000
+      internalID: 8042024654805234223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1041
+        width: 236
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34846b837f3d0830800000000000000
+      internalID: 4038954206313612346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_4
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1041
+        width: 236
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32724cd615cedcc90800000000000000
+      internalID: -7147797199089031389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_5
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1052
+        width: 237
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d95b30545710780800000000000000
+      internalID: -8718558464337142375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_6
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 1052
+        width: 237
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8653dedf79e94c0800000000000000
+      internalID: -4278815479093172055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_7
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 1057
+        width: 236
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d1c8b5a3e700ec0800000000000000
+      internalID: -3602740912787284718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_8
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1057
+        width: 236
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc7ec289d7dfd290800000000000000
+      internalID: -7863329095163151112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 766
+        width: 236
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91333510b6fd13b40800000000000000
+      internalID: 5418357477380141849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 774
+        width: 234
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f956b812cac1a790800000000000000
+      internalID: -7520506967744947726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_11
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 812
+        width: 255
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c8ca3579108afb0800000000000000
+      internalID: -4636454066922419185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_12
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 803
+        width: 236
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6b0b5f8e06456a0800000000000000
+      internalID: -6461433011699140893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_13
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 818
+        width: 255
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc9e06012bc6ca90800000000000000
+      internalID: -7293919203783959299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_14
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 819
+        width: 214
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd4114940dcbd4e0800000000000000
+      internalID: -1955744193614623282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 491
+        width: 236
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8d43423f19a3180800000000000000
+      internalID: -9134828420697106229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_16
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 524
+        width: 234
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9d3ae39015dac70800000000000000
+      internalID: 8983925931821488587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_17
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 574
+        width: 250
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5115bdedf4a25c0800000000000000
+      internalID: -4239488280635042313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_18
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 563
+        width: 246
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8b45a3fe638e650800000000000000
+      internalID: 6262315682962389220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_19
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 567
+        width: 236
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b39dabbf64e5dd0800000000000000
+      internalID: -2495479096531141818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_20
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 580
+        width: 226
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6844e08ed3264bf10800000000000000
+      internalID: 2284558929009460358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 224
+        width: 234
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa59d2b8d6a4a83b0800000000000000
+      internalID: -5509509359787469393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_22
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 282
+        width: 236
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1290cce92352d2510800000000000000
+      internalID: 1525916748091230497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_23
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 338
+        width: 248
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1393b5ffda3513c50800000000000000
+      internalID: 6643182932126808369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_24
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 326
+        width: 244
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4210c6c9ad5f0c0800000000000000
+      internalID: -4542484283771509585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_25
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 327
+        width: 226
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d7c7ed9e0c5b540800000000000000
+      internalID: 5023133070094269730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_26
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 327
+        width: 230
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b00a0f65f7cbd50800000000000000
+      internalID: 6754413552529836863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_27
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 6
+        width: 236
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05af662241a58dd80800000000000000
+      internalID: -8225725676869191088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_28
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 36
+        width: 236
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea053b0bd85e0c7d0800000000000000
+      internalID: -2900065763308908370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_29
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 95
+        width: 238
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963515263ae12eab0800000000000000
+      internalID: -4980384550840347799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_30
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 87
+        width: 242
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7723f0ed4466966b0800000000000000
+      internalID: -5302594640282701193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_31
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 86
+        width: 236
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5591cf255559464e0800000000000000
+      internalID: -1989300941693904555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GauntletSheet-uhd_32
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 88
+        width: 230
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac24c5387ca61500800000000000000
+      internalID: 366670051975376038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

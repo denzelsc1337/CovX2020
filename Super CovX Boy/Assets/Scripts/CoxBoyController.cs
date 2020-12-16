@@ -20,6 +20,7 @@ public class CoxBoyController : MonoBehaviour
 
     public static int jumps;
     public static int deaths;
+    public static int masks;
 
     private float width;
     private float height;
@@ -53,6 +54,8 @@ public class CoxBoyController : MonoBehaviour
         Application.targetFrameRate = 300;
         screenCenterX = Screen.width * 0.5f;
         screenWith = Screen.width / 2;
+        masks = PlayerPrefs.GetInt("mascarillas");
+
     }
 
     void Awake()
@@ -105,8 +108,13 @@ public class CoxBoyController : MonoBehaviour
         if (PlayerIsOnGround() || IsWallToLeftOrRight())
         {
 
-           return true;
+            return true;
         }
+        else
+        {
+
+        }
+
         return false;
     }
 
@@ -122,10 +130,12 @@ public class CoxBoyController : MonoBehaviour
         input.x = SimpleInput.GetAxisRaw("Horizontal");
         input.y = SimpleInput.GetAxisRaw("Jump");
         animator.SetFloat("Speed", Mathf.Abs(input.x));
+
         
 
 #if UNITY_ANDROID || UNITY_IOS
         input.y = SimpleInput.GetAxisRaw("Vertical");
+
 #endif
         // Si input.x es mayor que 0, entonces el jugador está mirando hacia la derecha, por lo que el sprite se voltea en el axis X
         if (input.x > 0f)
@@ -148,6 +158,7 @@ public class CoxBoyController : MonoBehaviour
         else
         {
             isJumping = false;
+
             //todo animator isJumping false
             animator.SetBool("IsJumping", false);
             jumpDuration = 0f;
@@ -200,7 +211,7 @@ public class CoxBoyController : MonoBehaviour
         if (PlayerIsTouchingGroundOrWall() && input.y == 1)
         {
             yVelocity = jump;
-            jumps++;
+            
             CreateDust();
         }
         else
@@ -221,18 +232,20 @@ public class CoxBoyController : MonoBehaviour
             //todo animator 1
             animator.SetBool("IsOnWall", false);
             animator.SetBool("IsJumping", true);
-
+           
 
         }
         else if (!IsWallToLeftOrRight())
         {
             animator.SetBool("IsOnWall", false);
+
             animator.SetBool("IsJumping", true);
         }
 
         if (IsWallToLeftOrRight() && !PlayerIsOnGround())
         {
             animator.SetBool("IsOnWall", true);
+
         }
 
         //todo animator 2
@@ -240,6 +253,7 @@ public class CoxBoyController : MonoBehaviour
         if (isJumping && jumpDuration < jumpDurationThreshold)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+            
         }
     }
 
@@ -280,12 +294,22 @@ public class CoxBoyController : MonoBehaviour
             //collision.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
             deaths += 1;
         }
+        if (collision.tag == "mask")
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("contando");
+            //collision.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
+            masks += 1;
+            //PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetInt("mascarillas", masks);
+        }
+
 
     }
 
     void OnGUI()
     {
-        GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString() +"\nSaltos: "+jumps.ToString());
+        GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString() +"\nSaltos: "+jumps.ToString() + "\nMascarillas: " + masks.ToString());
     }
 
     void CreateDust()
@@ -317,7 +341,7 @@ public class CoxBoyController : MonoBehaviour
         }
         if (deaths==0)
         {
-            Debug.Log("Acaso no lo viste venir?:D");
+            Debug.Log("Acaso no lo viste venir? :D");
         }
     }
 
