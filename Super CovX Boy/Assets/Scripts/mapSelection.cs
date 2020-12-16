@@ -32,9 +32,9 @@ public class mapSelection : MonoBehaviour
         }
     }
 
-    private void UnlockMap()
+    private void UnlockMap()//si el numero de mascarillas actuales es mayor que lo requerido se desbloqueara tambien 
     {
-        if (FindObjectOfType<UIManager>().masc > questNum)
+        if (UIManager.instance.masc >= questNum)
         {
             isUnlock = true;
         }
