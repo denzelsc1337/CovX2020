@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -28,8 +29,9 @@ public class UIManager : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            DontDestroyOnLoad(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     // Start is called before the first frame update
@@ -71,6 +73,32 @@ public class UIManager : MonoBehaviour
     private void UpdateMascUI()
     {
         mascarillas.text = masc.ToString();
+    }
+
+    public  void PressMapButton(int _mapIndex)
+    {
+        if (mapSelections[_mapIndex].isUnlock == true)//se podra entrar a ese mapa
+        {
+            levelSelectionPanel[_mapIndex].gameObject.SetActive(true);
+            mapSelectionPanel.gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("No puedes entrar ahi :D");
+        }
+    }
+
+    public void backButton()
+    {
+        mapSelectionPanel.gameObject.SetActive(true);
+        for (int i = 0; i < mapSelections.Length; i++)
+        {
+            levelSelectionPanel[i].gameObject.SetActive(false);
+        }
+    }
+    public void SceneTransition(string _sceneName)
+    {
+        SceneManager.LoadScene(_sceneName);
     }
 }
 

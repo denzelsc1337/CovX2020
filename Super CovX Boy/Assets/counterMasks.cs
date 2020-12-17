@@ -10,6 +10,7 @@ public class counterMasks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         old_mask = PlayerPrefs.GetInt("mascarillas");
        // mask_text.text = old_mask.ToString();
     }
