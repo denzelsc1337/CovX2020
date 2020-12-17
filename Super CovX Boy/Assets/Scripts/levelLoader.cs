@@ -8,6 +8,7 @@ public class levelLoader : MonoBehaviour
     public GameObject barras;
     public Slider slider;
     public Text progresstext;
+
    public void LoadLevel(string nameScene)
     {
         StartCoroutine(LoadAsynchronously(nameScene));

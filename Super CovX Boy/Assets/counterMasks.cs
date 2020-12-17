@@ -11,7 +11,7 @@ public class counterMasks : MonoBehaviour
     void Start()
     {
         old_mask = PlayerPrefs.GetInt("mascarillas");
-        mask_text.text = old_mask.ToString();
+       // mask_text.text = old_mask.ToString();
     }
 
     // Update is called once per frame
