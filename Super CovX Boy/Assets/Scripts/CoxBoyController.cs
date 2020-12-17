@@ -300,8 +300,8 @@ public class CoxBoyController : MonoBehaviour
             Debug.Log("contando");
             //collision.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
             masks += 1;
-            PlayerPrefs.DeleteAll();
-            //PlayerPrefs.SetInt("mascarillas", masks);
+            //PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetInt("mascarillas", masks);
         }
 
 

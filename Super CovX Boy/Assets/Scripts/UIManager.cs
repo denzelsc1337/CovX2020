@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Cantidad de mascarillas")]
     public int masc;
+    private int old_mask;
 
     public Text mascarillas;
     public mapSelection[] mapSelections;
@@ -37,7 +38,8 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        old_mask = PlayerPrefs.GetInt("mascarillas");
+        mascarillas.text = old_mask.ToString();
     }
 
     // Update is called once per frame
