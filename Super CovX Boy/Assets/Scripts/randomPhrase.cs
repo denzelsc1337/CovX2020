@@ -4,11 +4,17 @@ using UnityEngine.UI;
 public class randomPhrase : MonoBehaviour
 {
     public Text fraseRandom;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        tips();
 
+    }
+
+    public void tips()
+    {
         string[] tips = new string[] {
           "no olvides lavarte las manos constantenmete",
           "Manten siempre la mascarilla por encima y no por debajo de la nariz",
@@ -25,7 +31,7 @@ public class randomPhrase : MonoBehaviour
         Debug.Log(pickFrase);
     }
 
-
+  
     // Update is called once per frame
     void Update()
     {

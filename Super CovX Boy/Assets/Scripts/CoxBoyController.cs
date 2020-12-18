@@ -20,7 +20,10 @@ public class CoxBoyController : MonoBehaviour
 
     public static int jumps;
     public static int deaths;
+    [Header("Cantidad de mascarillas")]
+    public int questMascarillas;
     public static int masks;
+    public GameObject portalFinal;
 
     private float width;
     private float height;
@@ -32,6 +35,7 @@ public class CoxBoyController : MonoBehaviour
     public static Vector2 input;
     private Vector2 inputTouch;
     Vector2 startPos;
+    public int mascarNum;
 
     private SpriteRenderer sr;
     private static Rigidbody2D rb;
@@ -51,6 +55,7 @@ public class CoxBoyController : MonoBehaviour
 
     void Start()
     {
+        //PlayerPrefs.DeleteAll();
         Application.targetFrameRate = 300;
         screenCenterX = Screen.width * 0.5f;
         screenWith = Screen.width / 2;
@@ -131,7 +136,7 @@ public class CoxBoyController : MonoBehaviour
         input.y = SimpleInput.GetAxisRaw("Jump");
         animator.SetFloat("Speed", Mathf.Abs(input.x));
 
-        
+
 
 #if UNITY_ANDROID || UNITY_IOS
         input.y = SimpleInput.GetAxisRaw("Vertical");
@@ -211,7 +216,7 @@ public class CoxBoyController : MonoBehaviour
         if (PlayerIsTouchingGroundOrWall() && input.y == 1)
         {
             yVelocity = jump;
-            
+
             CreateDust();
         }
         else
@@ -232,7 +237,7 @@ public class CoxBoyController : MonoBehaviour
             //todo animator 1
             animator.SetBool("IsOnWall", false);
             animator.SetBool("IsJumping", true);
-           
+
 
         }
         else if (!IsWallToLeftOrRight())
@@ -253,7 +258,7 @@ public class CoxBoyController : MonoBehaviour
         if (isJumping && jumpDuration < jumpDurationThreshold)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
-            
+
         }
     }
 
@@ -296,12 +301,24 @@ public class CoxBoyController : MonoBehaviour
         }
         if (collision.tag == "mask")
         {
+            masks += 1;
+            //singleLevel.instance.startLevel(masks);
+            if (masks >= questMascarillas)
+            {
+                portalFinal.gameObject.SetActive(true);
+            }
+            else
+            {
+                portalFinal.gameObject.SetActive(false);
+            }
+
             Destroy(collision.gameObject);
+
             Debug.Log("contando");
             //collision.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
-            masks += 1;
+            
             //PlayerPrefs.DeleteAll();
-            PlayerPrefs.SetInt("mascarillas", masks);
+            //PlayerPrefs.SetInt("mascarillas", masks);
         }
 
 
@@ -309,7 +326,7 @@ public class CoxBoyController : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString() +"\nSaltos: "+jumps.ToString() + "\nMascarillas: " + masks.ToString());
+        GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString() + "\nSaltos: " + jumps.ToString() + "\nMascarillas: " + masks.ToString());
     }
 
     void CreateDust()
@@ -330,7 +347,7 @@ public class CoxBoyController : MonoBehaviour
     {
         switch (deaths)
         {
-            case 1:Debug.Log("Nice Work");break;
+            case 1: Debug.Log("Nice Work"); break;
             case 2: Debug.Log("1337"); break;
             case 3: Debug.Log("villa = design xD"); break;
             case 4: Debug.Log("145"); break;
@@ -339,7 +356,7 @@ public class CoxBoyController : MonoBehaviour
             default:
                 break;
         }
-        if (deaths==0)
+        if (deaths == 0)
         {
             Debug.Log("Acaso no lo viste venir? :D");
         }

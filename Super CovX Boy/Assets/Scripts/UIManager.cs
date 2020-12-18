@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         
     }
@@ -102,5 +102,17 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(_sceneName);
     }
+
+    public void backMapSelection()
+    {
+        mapSelectionPanel.gameObject.SetActive(true);
+        for (int i = 0; i < mapSelections.Length; i++)
+        {
+            levelSelectionPanel[i].gameObject.SetActive(false);
+        }
+        SceneManager.LoadScene("chapter selection");
+    }
+
+
 }
 
