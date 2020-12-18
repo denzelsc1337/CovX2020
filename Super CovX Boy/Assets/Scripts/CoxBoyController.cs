@@ -52,10 +52,9 @@ public class CoxBoyController : MonoBehaviour
     public float screenWith;
 
     public Button botonRight;
-
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         Application.targetFrameRate = 300;
         screenCenterX = Screen.width * 0.5f;
         screenWith = Screen.width / 2;
