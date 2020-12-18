@@ -56878,12 +56878,44 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 7662446506382126847, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2541
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662446506382126847, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2541
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662446506382126847, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2541
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662446506635197880, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662446506635197880, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.6357975
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662446506635197880, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.6357975
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662446506635197880, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.6357975
+      objectReference: {fileID: 0}
     - target: {fileID: 7662446507217334864, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
       propertyPath: m_Name
       value: loadCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 7662446507217334864, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662446507217334866, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7662446507217334868, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
@@ -56978,6 +57010,18 @@ PrefabInstance:
       propertyPath: panelLoad
       value: 
       objectReference: {fileID: 959782170}
+    - target: {fileID: 7662446507709620195, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9165
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662446507709620195, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9165
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662446507709620195, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9165
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
 --- !u!1 &1675365616

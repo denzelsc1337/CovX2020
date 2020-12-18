@@ -18,7 +18,7 @@ public class levelLoader : MonoBehaviour
     {
         //yield return new WaitForSeconds(4);
         AsyncOperation operation = SceneManager.LoadSceneAsync(nameScene);
-        loadingScreen.SetActive(true);
+        //loadingScreen.SetActive(true);
         //yield return new WaitForSeconds(3);
         barras.SetActive(false);
         while (!operation.isDone)
