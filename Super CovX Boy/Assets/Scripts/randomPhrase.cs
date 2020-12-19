@@ -21,9 +21,10 @@ public class randomPhrase : MonoBehaviour
           "Manten tu distancia, 2 metros como minimo :D",
           "No frotes tus manos contra tu cara si has tenido contacto con monedas,\n" +
           "barandas o algun material que tenga contacto con otras personas",
-          "Usa desinfectantes y al llegar de algun lugar siempre aleja la ropa que llevas puesta de la que no has usado",
+          "Usa desinfectantes y al llegar de algun lugar siempre aleja la ropa que llevas puesta\n" +
+          "de la que no has usado",
           "Si presentas fiebre, tos seca y dificultad para respirar\n" +
-          " acude a tu centro de salud mas cercano",
+          "acude a tu centro de salud mas cercano",
           "SAGAAAAAAAAAAAAAAAASTIIIIIIIIIIIII!!!",
           "Porque te quiero abrazar más adelante, me distancio ahora"};
         string pickFrase = tips[Random.Range(0, tips.Length)];
