@@ -28,5 +28,6 @@ public class loadTuto : MonoBehaviour
         bais.SetTrigger("go");
         yield return new WaitForSeconds(2.0f);
         tutoBegin.SetActive(false);
+
     }
 }

@@ -41,7 +41,7 @@ public class zoomCam : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             //CoxBoyController.input;
             Debug.Log("Level Complete");
