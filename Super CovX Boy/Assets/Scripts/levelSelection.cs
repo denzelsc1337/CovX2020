@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class levelSelection : MonoBehaviour
 {
@@ -42,17 +41,32 @@ public class levelSelection : MonoBehaviour
 
     private void unlockLevel()
     {
-        int previousLvlIndex = int.Parse(gameObject.name)-1;
-        if (PlayerPrefs.GetInt("Lv"+ previousLvlIndex)>0)
+        int previousLvlIndex = int.Parse(gameObject.name) - 1;
+        if (PlayerPrefs.GetInt("Lv" + previousLvlIndex) > 0)
         {
             isUnlocked = true;
         }
     }
 
+    public void SceneTransition(string _sceneName)
+    {
+        if (isUnlocked)
+        {
+            SceneManager.LoadScene(_sceneName);
+        }
+        else
+        {
+            Debug.Log("No has desbloqueado este level :D");
+        }
+
+
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
 }

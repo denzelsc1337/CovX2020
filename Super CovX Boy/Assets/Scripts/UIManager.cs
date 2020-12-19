@@ -71,9 +71,10 @@ public class UIManager : MonoBehaviour
             unlockMascTexts[i].text = masc.ToString() + "/" + mapSelections[i].endLevel * 3;
         }
     }
-
+    //Actualizar conteo de mascarillas
     private void UpdateMascUI()
     {
+        masc = PlayerPrefs.GetInt("Lv" + 1) + PlayerPrefs.GetInt("Lv" + 2) ;
         mascarillas.text = masc.ToString();
     }
 
@@ -98,10 +99,11 @@ public class UIManager : MonoBehaviour
             levelSelectionPanel[i].gameObject.SetActive(false);
         }
     }
-    public void SceneTransition(string _sceneName)
-    {
-        SceneManager.LoadScene(_sceneName);
-    }
+    //public void SceneTransition(string _sceneName)
+    //{
+
+    //    SceneManager.LoadScene(_sceneName);
+    //}
 
     public void backMapSelection()
     {

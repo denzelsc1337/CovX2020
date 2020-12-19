@@ -104,7 +104,7 @@ public class zoomCam : MonoBehaviour
           "Blanquiñosooooooo",
           "Hay talento falta apoyo",
           "tles?",
-          "la sise",
+          "Gottooo",
           "que te he hecho loco",
           "gayeta y aua",
           "compartir" };
