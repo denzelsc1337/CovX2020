@@ -24,7 +24,7 @@ public class singleLevel : MonoBehaviour
 
     public void startLevel()
     {
-        levelMascNum = CoxBoyController.masks;
+        levelMascNum = masckCollected.masks;
         if (levelMascNum > PlayerPrefs.GetInt("Lv" + levelIndex)) // key: Lv1; Value:Mascs number
         {
             PlayerPrefs.SetInt("Lv" + levelIndex, levelMascNum);

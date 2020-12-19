@@ -11,6 +11,7 @@ public class CoxBoyController : MonoBehaviour
     //public float speedCam;
 
     public static bool frozen;
+    public GameObject particle;
     public string axisName = "Horizontal";
     public static CharacterController control;
     public ParticleSystem dust;
@@ -20,6 +21,7 @@ public class CoxBoyController : MonoBehaviour
 
     public static int jumps;
     public static int deaths;
+
     [Header("Cantidad de mascarillas")]
     public int questMascarillas;
     public static int masks;
@@ -298,22 +300,24 @@ public class CoxBoyController : MonoBehaviour
             //collision.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
             deaths += 1;
         }
-        if (collision.tag == "mask")
+        if (collision.tag =="mask")
         {
-            masks += 1;
-            //singleLevel.instance.startLevel(masks);
-            if (masks >= questMascarillas)
-            {
-                portalFinal.gameObject.SetActive(true);
-            }
-            else
-            {
-                portalFinal.gameObject.SetActive(false);
-            }
+            //gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            ////particle.SetActive(true);
+            //masks += 1;
+            ////singleLevel.instance.startLevel(masks);
+            //if (masks >= questMascarillas)
+            //{
+            //    portalFinal.gameObject.SetActive(true);
+            //}
+            //else
+            //{
+            //    portalFinal.gameObject.SetActive(false);
+            //}
+            //Destroy(collision.gameObject,0.2f);
 
-            Destroy(collision.gameObject);
 
-            Debug.Log("contando");
+            //Debug.Log("contando");
             //collision.gameObject.transform.position = new Vector2(-7.173035f, -9.06f);
             
             //PlayerPrefs.DeleteAll();
@@ -325,7 +329,7 @@ public class CoxBoyController : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString() + "\nSaltos: " + jumps.ToString() + "\nMascarillas: " + masks.ToString());
+        GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString() + "\nSaltos: " + jumps.ToString() + "\nMascarillas: " + masckCollected.masks.ToString());
     }
 
     void CreateDust()
