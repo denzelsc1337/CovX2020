@@ -2780,8 +2780,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1380319853}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 854490607}
+        m_TargetAssemblyTypeName: levelSelection, Assembly-CSharp
         m_MethodName: SceneTransition
         m_Mode: 5
         m_Arguments:
@@ -2789,7 +2789,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level 3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &854490607
@@ -3119,8 +3119,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1380319853}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 940401929}
+        m_TargetAssemblyTypeName: levelSelection, Assembly-CSharp
         m_MethodName: SceneTransition
         m_Mode: 5
         m_Arguments:
@@ -3128,7 +3128,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level 4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &940401929
@@ -3997,7 +3997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1213385869
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4996,7 +4996,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 4
+          m_StringArgument: Level 2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1678794250
@@ -5600,7 +5600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1802732241
 RectTransform:
   m_ObjectHideFlags: 0
