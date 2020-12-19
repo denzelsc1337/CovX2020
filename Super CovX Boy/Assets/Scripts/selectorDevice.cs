@@ -2,6 +2,8 @@
 
 public class selectorDevice : MonoBehaviour
 {
+    public GameObject imageMobile;
+    public GameObject imagePC;
     public GameObject controls;
     bool isActive = false;
     // Start is called before the first frame update
@@ -12,10 +14,14 @@ public class selectorDevice : MonoBehaviour
 
 #if UNITY_ANDROID || UNITY_IOS
         controls.SetActive(true);
+        imageMobile.SetActive(true);
+        imagePC.SetActive(false);
 #endif
 
 #if UNITY_STANDALONE_WIN
-      controls.SetActive(false);
+        controls.SetActive(false);
+        imageMobile.SetActive(false);
+        imagePC.SetActive(true);
 #endif
     }
 

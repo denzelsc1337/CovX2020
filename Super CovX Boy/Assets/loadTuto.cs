@@ -5,6 +5,7 @@ using UnityEngine;
 public class loadTuto : MonoBehaviour
 {
     public GameObject tutoBegin;
+    public Animator bais;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,17 +25,8 @@ public class loadTuto : MonoBehaviour
         Debug.Log("tutorial activo");
         tutoBegin.SetActive(true);
         yield return new WaitForSeconds(5.5f);
+        bais.SetTrigger("go");
+        yield return new WaitForSeconds(2.0f);
         tutoBegin.SetActive(false);
-        //AsyncOperation loading = SceneManager.LoadSceneAsync(nameScenes);
-        //panelLoad.SetActive(false);
-        //escenaGame.SetActive(true);
-        //while (!loading.isDone)
-        //{
-
-        //    barFill.fillAmount = loading.progress;
-        //    //escenaGame.SetActive(false);
-        //    //Debug.Log(progress);
-        //    yield return null;
-        //}
     }
 }
