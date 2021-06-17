@@ -8,7 +8,7 @@ public class buttonNavigation : MonoBehaviour
    
 
      int index = 0;
-    public int total = 6;
+    public int total = 3;
     public float yOffset;
     // Start is called before the first frame update
     void Start()
@@ -42,7 +42,7 @@ public class buttonNavigation : MonoBehaviour
             }
 
         }
-
+   
 
         if (Input.GetKeyDown(KeyCode.Return))
         {

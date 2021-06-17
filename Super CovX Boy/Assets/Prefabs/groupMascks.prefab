@@ -327,8 +327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdd6f21e96ec5044bb58d8d318dee6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questMascarillas: 10
-  portalFinal: {fileID: 0}
+  questMascarillas: 9
+  portalFinal: {fileID: 2448414436874186448, guid: 6faa77618ebc23049aa00d74c6c30d2b, type: 3}
 --- !u!1 &6917186382693124523
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,8 +554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdd6f21e96ec5044bb58d8d318dee6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questMascarillas: 10
-  portalFinal: {fileID: 0}
+  questMascarillas: 9
+  portalFinal: {fileID: 2448414436874186448, guid: 6faa77618ebc23049aa00d74c6c30d2b, type: 3}
 --- !u!1 &6917186383325727575
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,8 +781,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdd6f21e96ec5044bb58d8d318dee6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questMascarillas: 10
-  portalFinal: {fileID: 0}
+  questMascarillas: 9
+  portalFinal: {fileID: 2448414436874186448, guid: 6faa77618ebc23049aa00d74c6c30d2b, type: 3}
 --- !u!1 &6917186383504430379
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,8 +906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdd6f21e96ec5044bb58d8d318dee6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questMascarillas: 10
-  portalFinal: {fileID: 0}
+  questMascarillas: 9
+  portalFinal: {fileID: 2448414436874186448, guid: 6faa77618ebc23049aa00d74c6c30d2b, type: 3}
 --- !u!1 &6917186383701439590
 GameObject:
   m_ObjectHideFlags: 0

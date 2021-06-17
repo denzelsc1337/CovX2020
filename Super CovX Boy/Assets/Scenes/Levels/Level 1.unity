@@ -1556,7 +1556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &339127602
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1573,7 +1573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: -395}
+  m_AnchoredPosition: {x: -9, y: -395}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339127603
@@ -1781,6 +1781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questMascarillas: 5
   portalFinal: {fileID: 1007891198}
+  portalFinal_2: {fileID: 0}
 --- !u!61 &408077014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16350,6 +16351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questMascarillas: 5
   portalFinal: {fileID: 1007891198}
+  portalFinal_2: {fileID: 0}
 --- !u!61 &595551936
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16789,6 +16791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questMascarillas: 5
   portalFinal: {fileID: 1007891198}
+  portalFinal_2: {fileID: 0}
 --- !u!61 &707628750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19395,6 +19398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questMascarillas: 5
   portalFinal: {fileID: 1007891198}
+  portalFinal_2: {fileID: 0}
 --- !u!61 &1226527208
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19864,7 +19868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1270258403
 Transform:
   m_ObjectHideFlags: 0
@@ -20021,6 +20025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questMascarillas: 5
   portalFinal: {fileID: 1007891198}
+  portalFinal_2: {fileID: 0}
 --- !u!61 &1273650362
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58700,7 +58705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7662446507217334864, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7662446507217334866, guid: ad4393f81cd650b4c83d74fe076c8875, type: 3}
       propertyPath: m_UiScaleMode
@@ -59474,11 +59479,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fraseRandom: {fileID: 0}
-  jumps: {fileID: 0}
   deaths: {fileID: 0}
   controls: {fileID: 0}
   zoomActive: 0
-  sceneName: 
   cn: {fileID: 0}
   cam: {fileID: 0}
   speedZoom: 0.0155
@@ -68973,31 +68976,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 463285076593629213, guid: 3dba1239934b2c14b91646f9bbdc7e04, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 463285076593629213, guid: 3dba1239934b2c14b91646f9bbdc7e04, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 463285076593629213, guid: 3dba1239934b2c14b91646f9bbdc7e04, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -185
       objectReference: {fileID: 0}
     - target: {fileID: 463313882348523324, guid: 3dba1239934b2c14b91646f9bbdc7e04, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 463563457269972227, guid: 3dba1239934b2c14b91646f9bbdc7e04, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 463563457269972227, guid: 3dba1239934b2c14b91646f9bbdc7e04, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 463563457269972227, guid: 3dba1239934b2c14b91646f9bbdc7e04, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -185
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dba1239934b2c14b91646f9bbdc7e04, type: 3}
@@ -69012,6 +69015,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1208599239}
+    - target: {fileID: 728437554646388322, guid: 301c2ab1233702348b94a0a50d09d3bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728437554648346424, guid: 301c2ab1233702348b94a0a50d09d3bd, type: 3}
+      propertyPath: m_Text
+      value: Continue
+      objectReference: {fileID: 0}
     - target: {fileID: 728437555481061074, guid: 301c2ab1233702348b94a0a50d09d3bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -69099,6 +69110,18 @@ PrefabInstance:
     - target: {fileID: 728437555481061078, guid: 301c2ab1233702348b94a0a50d09d3bd, type: 3}
       propertyPath: m_Name
       value: transitionLevelCompleted
+      objectReference: {fileID: 0}
+    - target: {fileID: 728437555481061078, guid: 301c2ab1233702348b94a0a50d09d3bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 728437555529463976, guid: 301c2ab1233702348b94a0a50d09d3bd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 728437555529463976, guid: 301c2ab1233702348b94a0a50d09d3bd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -406
       objectReference: {fileID: 0}
     - target: {fileID: 728437555529463977, guid: 301c2ab1233702348b94a0a50d09d3bd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -69234,6 +69257,10 @@ PrefabInstance:
       propertyPath: fraseRandom
       value: 
       objectReference: {fileID: 339127603}
+    - target: {fileID: 2448414436874186443, guid: 6faa77618ebc23049aa00d74c6c30d2b, type: 3}
+      propertyPath: sceneName
+      value: Level 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2448414436874186448, guid: 6faa77618ebc23049aa00d74c6c30d2b, type: 3}
       propertyPath: m_Name
       value: Mud Particle

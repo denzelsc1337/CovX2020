@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         
     }
@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //PlayerPrefs.DeleteAll();
         old_mask = PlayerPrefs.GetInt("mascarillas");
         mascarillas.text = old_mask.ToString();
     }
@@ -74,7 +75,7 @@ public class UIManager : MonoBehaviour
     //Actualizar conteo de mascarillas
     private void UpdateMascUI()
     {
-        masc = PlayerPrefs.GetInt("Lv" + 1) + PlayerPrefs.GetInt("Lv" + 2) ;
+        masc = PlayerPrefs.GetInt("Lv" + 1) + PlayerPrefs.GetInt("Lv" + 2) + PlayerPrefs.GetInt("Lv" + 3) + PlayerPrefs.GetInt("Lv" + 4);
         mascarillas.text = masc.ToString();
     }
 

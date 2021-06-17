@@ -19,7 +19,7 @@ public class singleLevel : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     public void startLevel()

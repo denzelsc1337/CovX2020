@@ -329,7 +329,8 @@ public class CoxBoyController : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString() + "\nSaltos: " + jumps.ToString() + "\nMascarillas: " + masckCollected.masks.ToString());
+        GUI.Label(new Rect(20, 20, 100, 100), "Mascarillas: " + masckCollected.masks.ToString());
+        //GUI.Label(new Rect(20, 20, 100, 100), "Muertes: " + deaths.ToString() + "\nSaltos: " + jumps.ToString() + "\nMascarillas: " + masckCollected.masks.ToString());
     }
 
     void CreateDust()

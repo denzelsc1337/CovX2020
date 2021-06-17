@@ -5,11 +5,11 @@ using UnityEngine.UI;
 public class zoomCam : MonoBehaviour
 {
     public Text fraseRandom;
-    public Text jumps;
+    //public Text jumps;
     public Text deaths;
     public GameObject controls;
     public bool zoomActive;
-    [SerializeField] private string sceneName;
+    //[SerializeField] private string sceneName;
     public CinemachineVirtualCamera cn;
     private Cinemachine.CinemachineVirtualCamera cm;
 
@@ -41,16 +41,15 @@ public class zoomCam : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.tag =="Player")
         {
             //CoxBoyController.input;
             Debug.Log("Level Complete");
             controls.SetActive(false);
             CoxBoyController.cancelControls();
-            //StartCoroutine(LoadAsynchronously(sceneName));
             CoxBoyController.animator.enabled = false;
             deaths.text = CoxBoyController.deaths.ToString();
-            jumps.text = CoxBoyController.jumps.ToString();
+            //jumps.text = CoxBoyController.jumps.ToString();
             CoxBoyController.phrases();
             zoomActive = true;
             levelCompleted();
@@ -96,18 +95,8 @@ public class zoomCam : MonoBehaviour
     public void levelCompleted()
     {
         string[] complete = new string[] {
-          "Tan gozuuuuuuuuuu",
-          "aea mongol",
-          "tsssssssss",
-          "engañao de la vida",
-          "aea chupapinga. Pobre mongol",
-          "Blanquiñosooooooo",
-          "Hay talento falta apoyo",
-          "tles?",
-          "Gottooo",
-          "que te he hecho loco",
-          "gayeta y aua",
-          "compartir" };
+          "Parece que algo no esta bien...",
+          "Las personas empiezan\n a ponerse mal" };
         string pickFrase_2 = complete[Random.Range(0, complete.Length)];
         /*enviar aqui texto
         enviar aqui texto*/

@@ -142,11 +142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632c6f17668bc574db1bcd7a0f52dc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fraseRandom: {fileID: 0}
   jumps: {fileID: 0}
   deaths: {fileID: 0}
   controls: {fileID: 0}
   zoomActive: 0
-  sceneName: Level 2
+  sceneName: Level 1
   cn: {fileID: 0}
   cam: {fileID: 0}
   speedZoom: 0.0145

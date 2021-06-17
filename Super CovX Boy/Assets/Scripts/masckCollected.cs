@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class masckCollected : MonoBehaviour
 {
@@ -7,20 +6,16 @@ public class masckCollected : MonoBehaviour
     public int questMascarillas;
     public static int masks;
     public GameObject portalFinal;
+    public GameObject portalFinal_2;
 
-    public Text mascNecesarias;
-    public void Start()
-    {
-        //mascNecesarias.text = questMascarillas.ToString();   
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag =="Player")
+        if (collision.tag == "Player")
         {
+            masks += 1;
+            
             //GetComponent<SpriteRenderer>().enabled = false;
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            masks += 1;
-            singleLevel.instance.startLevel(masks);
             if (masks >= questMascarillas)
             {
                 portalFinal.gameObject.SetActive(true);
@@ -29,10 +24,7 @@ public class masckCollected : MonoBehaviour
             {
                 portalFinal.gameObject.SetActive(false);
             }
-
-            Destroy(gameObject,0.2f);
-
-
+            Destroy(gameObject, 0.2f);
             Debug.Log("contando");
         }
 

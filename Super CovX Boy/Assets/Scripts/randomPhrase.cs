@@ -16,7 +16,7 @@ public class randomPhrase : MonoBehaviour
     public void tips()
     {
         string[] tips = new string[] {
-          "no olvides lavarte las manos constantenmete",
+          "No olvides lavarte las manos constantenmete",
           "Manten siempre la mascarilla por encima y no por debajo de la nariz",
           "Manten tu distancia, 2 metros como minimo :D",
           "No frotes tus manos contra tu cara si has tenido contacto con monedas,\n" +
@@ -24,8 +24,7 @@ public class randomPhrase : MonoBehaviour
           "Usa desinfectantes y al llegar de algun lugar siempre aleja la ropa que llevas puesta\n" +
           "de la que no has usado",
           "Si presentas fiebre, tos seca y dificultad para respirar\n" +
-          "acude a tu centro de salud mas cercano",
-          "SAGAAAAAAAAAAAAAAAASTIIIIIIIIIIIII!!!",
+          "acude a tu centro de salud más cercano",
           "Porque te quiero abrazar más adelante, me distancio ahora"};
         string pickFrase = tips[Random.Range(0, tips.Length)];
         /*enviar aqui texto
